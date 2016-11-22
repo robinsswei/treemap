@@ -1,0 +1,10 @@
+Treemap Effects
+
+http://research2.fidelity.com/fidelity/screeners/etf/heatmap.asp?field=IntradayPricePerformance&quote=hover&levinv=nonleveraged&assetclass=Equity&FirstFilter=Domestic
+
+Examples:
+http://bl.ocks.org/zanarmstrong/76d263bd36f312cb0f9f
+http://bl.ocks.org/ganeshv/6a8e9ada3ab7f2d88022
+
+Start Python Simple Server:
+python -m SimpleHTTPServer 1234
