@@ -1,0 +1,62 @@
+{
+    "cpuUsedTotal": 0,
+    "memUsedTotal": 0,
+    "memTotal": 64426,
+    "cnTotal": 12,
+    "diskTotal": 0,
+    "psTotal": 1,
+    "used": 0,
+    "diskUsedTotal": 0,
+    "total": 0,
+    "children": [
+        {
+            "children": [
+                {
+                    "children": [
+                        {
+                            "name": "as-eu194",
+                            "used": 0,
+                            "type": "engine",
+                            "title": 0,
+                            "value": 0
+                        },
+                        {
+                            "name": "as-at999",
+                            "used": 0,
+                            "type": "engine",
+                            "title": 0,
+                            "value": 0
+                        },
+                        {
+                            "name": "as-ib247",
+                            "used": 0,
+                            "type": "engine",
+                            "title": 0,
+                            "value": 0
+                        },
+                        {
+                            "name": "as-ty095",
+                            "used": 0,
+                            "type": "engine",
+                            "title": 0,
+                            "value": 0
+                        }
+                    ],
+                    "name": "ip-172-31-17-101",
+                    "used": 0,
+                    "type": "engine",
+                    "title": 0,
+                    "value": 0
+                }
+            ],
+            "name": "dockerCloud",
+            "used": 0,
+            "type": "cloud",
+            "title": 0,
+            "value": 0
+        }
+    ],
+    "cpuTotal": 8,
+    "name": "All the clouds",
+    "vmTotal": 0
+}

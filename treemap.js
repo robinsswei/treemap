@@ -1,6 +1,10 @@
 /*global $*/
 $(function(){
-  
+  var counter = 0;
+  window.uniqueId = function(){
+      return 'id-' + counter++
+  }
+
   var margin = {top: 30, right: 0, bottom: 20, left: 0},
       width = 960,
       height = 500 - margin.top - margin.bottom,
@@ -39,20 +43,24 @@ $(function(){
       .style("margin.right", -margin.right + "px")
     .append("g")
       .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
-      .style("shape-rendering", "crispEdges");
+      .style("shape-rendering", "crispEdges")
+      .attr("id", uniqueId)
   
   var grandparent = svg.append("g")
-      .attr("class", "grandparent");
+      .attr("class", "grandparent")
+      .attr("id", uniqueId)
   
   grandparent.append("rect")
       .attr("y", -margin.top)
       .attr("width", width)
-      .attr("height", margin.top);
+      .attr("height", margin.top)
+      .attr("id", uniqueId)
   
   grandparent.append("text")
       .attr("x", 6)
       .attr("y", 6 - margin.top)
-      .attr("dy", ".75em");
+      .attr("dy", ".75em")
+      .attr("id", uniqueId)
   
   var legend = d3.select("#legend").append("svg")
     .attr("width", width + margin.left + margin.right)
@@ -140,12 +148,14 @@ $(function(){
       return (parseInt(hexcolor.replace('#', ''), 3) > 0xffffff/3) ? 'black':'white';
   }
   
-  d3.json("data/example.json", function(root) {
-    console.log(root)
-    initialize(root);
-    accumulate(root);
-    layout(root);
-    display(root);
+  d3.json("data/cpu.json", function(root) {
+    // console.log(root)
+
+    parseData(root)
+    // initialize(root);
+    // accumulate(root);
+    // layout(root);
+    // display(root);
   
     function display(d) {
       grandparent
@@ -153,20 +163,24 @@ $(function(){
           .on("click", transition)
         .select("text")
           .text(name(d))
+          .attr("id", uniqueId)
   
       // color header based on grandparent's rate
       grandparent
         .datum(d.parent)
         .select("rect")
         .attr("fill", function(){console.log(color(d.rate)); return color(d['rate'])})
+        .attr("id", uniqueId)
   
       var g1 = svg.insert("g", ".grandparent")
           .datum(d)
-          .attr("class", "depth");
+          .attr("class", "depth")
+          .attr("id", uniqueId)
   
       var g = g1.selectAll("g")
           .data(d._children)
-        .enter().append("g");
+        .enter().append("g")
+                .attr("id", uniqueId)
   
       g.filter(function(d) { return d._children; })
           .classed("children", true)
@@ -176,19 +190,45 @@ $(function(){
           .data(function(d) { return d._children || [d]; })
         .enter().append("rect")
           .attr("class", "child")
+          .attr("id", uniqueId)
           .call(rect);
   
       g.append("rect")
           .attr("class", "parent")
+          .attr("id", uniqueId)
           .call(rect)
         .append("title")
-          .text(function(d) {console.log(typeof(d.value), d.value); return d.name + ', Cases of TB: ' + d.value + ', percent change: ' + formatNumber(d.rate); });
+          .text(function(d) {console.log(typeof(d.value), d.value); return d.name + ', value: ' + d.value + ', percent : ' + formatNumber(d.rate); });
   
       g.append("text")
           .attr("dy", ".75em")
+          .attr("id", uniqueId)
           .text(function(d) { return d.name; })
-          .call(text);
-  
+          // .call(text);
+          .attr("x", function(d) { return x(d.x) + 6; })
+          .attr("y", function(d) { return y(d.y) + 6; })
+          .attr("fill", function (d) {return getContrast50(color(parseFloat(d.rate)))})
+          .style("opacity", function(d){
+
+
+            // var box = this.getBBox()
+            // console.log("TEXT width: " + box.width)
+
+            // var id = $(this).attr("id")
+            // console.log(id)
+            // var parent = $("#"+id).prev()
+
+            // var parentWidth = parent[0].parentNode.getBoundingClientRect().width
+
+            // console.log("Parent Width: " + parentWidth)
+
+            // if(box.width <= parentWidth) {
+            //   return 1; // fits, show the text
+            // } else {
+            //   return 0; // does not fit, make transparent
+            // }
+        })
+
       function transition(d) {
         if (transitioning || !d) return;
         transitioning = true;
@@ -211,11 +251,13 @@ $(function(){
         g2.selectAll("text").style("fill-opacity", 0);
   
         // Transition to the new view.
-        t1.selectAll("text").call(text).style("fill-opacity", 0);
-        t2.selectAll("text").call(text).style("fill-opacity", 1);
+
+
         t1.selectAll("rect").call(rect);
         t2.selectAll("rect").call(rect);
-  
+        
+        t1.selectAll("text").call(text).style("fill-opacity", 0);
+        t2.selectAll("text").call(text).style("fill-opacity", 1);
         // Remove the old node when the transition is finished.
         t1.remove().each("end", function() {
           svg.style("shape-rendering", "crispEdges");
@@ -229,7 +271,7 @@ $(function(){
     function text(text) {
       text.attr("x", function(d) { return x(d.x) + 6; })
           .attr("y", function(d) { return y(d.y) + 6; })
-          .attr("fill", function (d) {return getContrast50(color(parseFloat(d.rate)))});
+          .attr("fill", function (d) {return getContrast50(color(parseFloat(d.rate)))})
     }
   
     function rect(rect) {
@@ -242,10 +284,21 @@ $(function(){
   
     function name(d) {
       return d.parent
-          ? name(d.parent) + "." + d.name
+          ? name(d.parent) + " / " + d.name
           : d.name;
     }
   
   });
+  
+  function parseData(json){
+    console.log("Before: ")
+    console.dir(json)
 
+    var data = {}
+    // TO-DO: parse data
+    
+    // console.log("After: ")
+    // console.dir(data)
+    return data
+  }
 })
