@@ -4,20 +4,18 @@
   <title>Zoomable Treemaps with Color</title>
   <link rel="stylesheet" type="text/css" href="treemap.css" />
   <script type="text/javascript" src="lib/jquery.min.js"></script>
+  <script type="text/javascript" src="lib/underscore-min.js"></script>
   <script type="text/javascript" src="lib/d3.v3.min.js"></script>
 </head>
 <body>
-  <h1>Zoomable Treemaps, with Color</h1>
-  <h3 style="font-weight: bold">Legend</h3>
-  <div id="legend"></div>
-  
-  <p id="chart">
-  <!-- <h3 style="font-weight: bold">Legend</h3>
-  <p style="width: 960px">Color: Percent change in number of cases of TB from 2006 to 2012 (negative is good).</p>
-  <div id="legend"></div> -->
-  
-  <p>Size of box: number of TB cases in 2012.</p>
-  
+  <div class="container" id="wrapper">
+    <div class="row">
+      <h1>Mosaix Heatmap</h1>
+      <div id="legend"></div>
+    </div>
+    <div class="row" id="main">
+    </div>
+  </div>
   <script type="text/javascript" src="treemap.js"></script>
 </body>
 </html>
