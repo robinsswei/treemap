@@ -1,463 +1,472 @@
 {
-  "cpuUsedTotal": 30,
-  "memUsedTotal": 3840,
-  "memTotal": 64426,
-  "cnTotal": 30,
-  "diskTotal": 0,
-  "psTotal": 1,
-  "used": 0,
-  "diskUsedTotal": 0,
-  "total": 0,
-  "children": [
-      {
-          "children": [
-              {
-                  "children": [
-                      {   
-                          "name": "as-lb260",
-                          "used": 0.2641321672122347,
-                          "type": "engine",
-                          "title": 0.6931471805599453,
-                          "value": 1
-                      },
-                      {
-                          "name": "as-se253",
-                          "used": 0.273530001954005,
-                          "type": "engine",
-                          "title": 0.6931471805599453,
-                          "value": 1
-                      },
-                      {
-                          "name": "as-rl178",
-                          "used": 0.26779736093691475,
-                          "type": "engine",
-                          "title": 0.6931471805599453,
-                          "value": 1
-                      },
-                      {
-                          "name": "as-lo217",
-                          "used": 0.24801724753144458,
-                          "type": "engine",
-                          "title": 0.6931471805599453,
-                          "value": 1
-                      },
-                      {
-                          "name": "as-sr655",
-                          "used": 0.2589868294712736,
-                          "type": "engine",
-                          "title": 0.6931471805599453,
-                          "value": 1
-                      },
-                      {
-                          "name": "as-sr007",
-                          "used": 0.25261890695786515,
-                          "type": "engine",
-                          "title": 0.6931471805599453,
-                          "value": 1
-                      },
-                      {
-                          "name": "as-ab189",
-                          "used": 0.28322225933333334,
-                          "type": "engine",
-                          "title": 0.6931471805599453,
-                          "value": 1
-                      },
-                      {
-                          "name": "as-tt087",
-                          "used": 0.2791602063333333,
-                          "type": "engine",
-                          "title": 0.6931471805599453,
-                          "value": 1
-                      },
-                      {
-                          "name": "as-ah352",
-                          "used": 0.26478244733426964,
-                          "type": "engine",
-                          "title": 0.6931471805599453,
-                          "value": 1
-                      },
-                      {
-                          "name": "as-ne183",
-                          "used": 0.25171183867042135,
-                          "type": "engine",
-                          "title": 0.6931471805599453,
-                          "value": 1
-                      },
-                      {
-                          "name": "as-em137",
-                          "used": 0.27611300033333336,
-                          "type": "engine",
-                          "title": 0.6931471805599453,
-                          "value": 1
-                      },
-                      {
-                          "name": "as-ha761",
-                          "used": 0.2655236878764045,
-                          "type": "engine",
-                          "title": 0.6931471805599453,
-                          "value": 1
-                      },
-                      {
-                          "name": "as-no075",
-                          "used": 0.24630707747778474,
-                          "type": "engine",
-                          "title": 0.6931471805599453,
-                          "value": 1
-                      },
-                      {
-                          "name": "as-at693",
-                          "used": 0.2651268952687735,
-                          "type": "engine",
-                          "title": 0.6931471805599453,
-                          "value": 1
-                      },
-                      {
-                          "name": "as-hp668",
-                          "used": 0.24976523439076156,
-                          "type": "engine",
-                          "title": 0.6931471805599453,
-                          "value": 1
-                      },
-                      {
-                          "name": "as-eq746",
-                          "used": 0.28666492798501875,
-                          "type": "engine",
-                          "title": 0.6931471805599453,
-                          "value": 1
-                      },
-                      {
-                          "name": "as-vi615",
-                          "used": 0.26755801569954224,
-                          "type": "engine",
-                          "title": 0.6931471805599453,
-                          "value": 1
-                      },
-                      {
-                          "name": "as-oi743",
-                          "used": 0.29582752496910114,
-                          "type": "engine",
-                          "title": 0.6931471805599453,
-                          "value": 1
-                      },
-                      {
-                          "name": "as-oc375",
-                          "used": 0.25593342366666666,
-                          "type": "engine",
-                          "title": 0.6931471805599453,
-                          "value": 1
-                      },
-                      {
-                          "name": "as-le826",
-                          "used": 0.24673117525,
-                          "type": "engine",
-                          "title": 0.6931471805599453,
-                          "value": 1
-                      },
-                      {
-                          "name": "as-ci653",
-                          "used": 0.2668968767705465,
-                          "type": "engine",
-                          "title": 0.6931471805599453,
-                          "value": 1
-                      },
-                      {
-                          "name": "as-tu997",
-                          "used": 0.2722887748548185,
-                          "type": "engine",
-                          "title": 0.6931471805599453,
-                          "value": 1
-                      },
-                      {
-                          "name": "as-nt132",
-                          "used": 0.2819341929891937,
-                          "type": "engine",
-                          "title": 0.6931471805599453,
-                          "value": 1
-                      },
-                      {
-                          "name": "as-oo291",
-                          "used": 0.2640906098770287,
-                          "type": "engine",
-                          "title": 0.6931471805599453,
-                          "value": 1
-                      },
-                      {
-                          "name": "as-tt475",
-                          "used": 0.2587061510563204,
-                          "type": "engine",
-                          "title": 0.6931471805599453,
-                          "value": 1
-                      },
-                      {
-                          "name": "as-ss102",
-                          "used": 0.24960708066666668,
-                          "type": "engine",
-                          "title": 0.6931471805599453,
-                          "value": 1
-                      },
-                      {
-                          "name": "as-at955",
-                          "used": 0.24634613858343737,
-                          "type": "engine",
-                          "title": 0.6931471805599453,
-                          "value": 1
-                      },
-                      {
-                          "name": "as-nc707",
-                          "used": 0.26071314689062053,
-                          "type": "engine",
-                          "title": 0.6931471805599453,
-                          "value": 1
-                      },
-                      {
-                          "name": "as-st583",
-                          "used": 0.28551444968445694,
-                          "type": "engine",
-                          "title": 0.6931471805599453,
-                          "value": 1
-                      },
-                      {
-                          "name": "as-oh182",
-                          "used": 0.2833952673333333,
-                          "type": "engine",
-                          "title": 0.6931471805599453,
-                          "value": 1
-                      }
-                  ],
-                  "name": "ip-172-31-9-175",
-                  "used": 30,
-                  "type": "engine",
-                  "title": 4.174387269895637,
-                  "value": 64
-              },
-              {
-                  "children": [
-                      {   
-                          "name": "as-lb260",
-                          "used": 0.2641321672122347,
-                          "type": "engine",
-                          "title": 0.6931471805599453,
-                          "value": 1
-                      },
-                      {
-                          "name": "as-se253",
-                          "used": 0.273530001954005,
-                          "type": "engine",
-                          "title": 0.6931471805599453,
-                          "value": 1
-                      },
-                      {
-                          "name": "as-rl178",
-                          "used": 0.26779736093691475,
-                          "type": "engine",
-                          "title": 0.6931471805599453,
-                          "value": 1
-                      },
-                      {
-                          "name": "as-lo217",
-                          "used": 0.24801724753144458,
-                          "type": "engine",
-                          "title": 0.6931471805599453,
-                          "value": 1
-                      },
-                      {
-                          "name": "as-sr655",
-                          "used": 0.2589868294712736,
-                          "type": "engine",
-                          "title": 0.6931471805599453,
-                          "value": 1
-                      },
-                      {
-                          "name": "as-sr007",
-                          "used": 0.25261890695786515,
-                          "type": "engine",
-                          "title": 0.6931471805599453,
-                          "value": 1
-                      },
-                      {
-                          "name": "as-ab189",
-                          "used": 0.28322225933333334,
-                          "type": "engine",
-                          "title": 0.6931471805599453,
-                          "value": 1
-                      },
-                      {
-                          "name": "as-tt087",
-                          "used": 0.2791602063333333,
-                          "type": "engine",
-                          "title": 0.6931471805599453,
-                          "value": 1
-                      },
-                      {
-                          "name": "as-ah352",
-                          "used": 0.26478244733426964,
-                          "type": "engine",
-                          "title": 0.6931471805599453,
-                          "value": 1
-                      },
-                      {
-                          "name": "as-ne183",
-                          "used": 0.25171183867042135,
-                          "type": "engine",
-                          "title": 0.6931471805599453,
-                          "value": 1
-                      },
-                      {
-                          "name": "as-em137",
-                          "used": 0.27611300033333336,
-                          "type": "engine",
-                          "title": 0.6931471805599453,
-                          "value": 1
-                      },
-                      {
-                          "name": "as-ha761",
-                          "used": 0.2655236878764045,
-                          "type": "engine",
-                          "title": 0.6931471805599453,
-                          "value": 1
-                      },
-                      {
-                          "name": "as-no075",
-                          "used": 0.24630707747778474,
-                          "type": "engine",
-                          "title": 0.6931471805599453,
-                          "value": 1
-                      },
-                      {
-                          "name": "as-at693",
-                          "used": 0.2651268952687735,
-                          "type": "engine",
-                          "title": 0.6931471805599453,
-                          "value": 1
-                      },
-                      {
-                          "name": "as-hp668",
-                          "used": 0.24976523439076156,
-                          "type": "engine",
-                          "title": 0.6931471805599453,
-                          "value": 1
-                      },
-                      {
-                          "name": "as-eq746",
-                          "used": 0.28666492798501875,
-                          "type": "engine",
-                          "title": 0.6931471805599453,
-                          "value": 1
-                      },
-                      {
-                          "name": "as-vi615",
-                          "used": 0.26755801569954224,
-                          "type": "engine",
-                          "title": 0.6931471805599453,
-                          "value": 1
-                      },
-                      {
-                          "name": "as-oi743",
-                          "used": 0.29582752496910114,
-                          "type": "engine",
-                          "title": 0.6931471805599453,
-                          "value": 1
-                      },
-                      {
-                          "name": "as-oc375",
-                          "used": 0.25593342366666666,
-                          "type": "engine",
-                          "title": 0.6931471805599453,
-                          "value": 1
-                      },
-                      {
-                          "name": "as-le826",
-                          "used": 0.24673117525,
-                          "type": "engine",
-                          "title": 0.6931471805599453,
-                          "value": 1
-                      },
-                      {
-                          "name": "as-ci653",
-                          "used": 0.2668968767705465,
-                          "type": "engine",
-                          "title": 0.6931471805599453,
-                          "value": 1
-                      },
-                      {
-                          "name": "as-tu997",
-                          "used": 0.2722887748548185,
-                          "type": "engine",
-                          "title": 0.6931471805599453,
-                          "value": 1
-                      },
-                      {
-                          "name": "as-nt132",
-                          "used": 0.2819341929891937,
-                          "type": "engine",
-                          "title": 0.6931471805599453,
-                          "value": 1
-                      },
-                      {
-                          "name": "as-oo291",
-                          "used": 0.2640906098770287,
-                          "type": "engine",
-                          "title": 0.6931471805599453,
-                          "value": 1
-                      },
-                      {
-                          "name": "as-tt475",
-                          "used": 0.2587061510563204,
-                          "type": "engine",
-                          "title": 0.6931471805599453,
-                          "value": 1
-                      },
-                      {
-                          "name": "as-ss102",
-                          "used": 0.24960708066666668,
-                          "type": "engine",
-                          "title": 0.6931471805599453,
-                          "value": 1
-                      },
-                      {
-                          "name": "as-at955",
-                          "used": 0.24634613858343737,
-                          "type": "engine",
-                          "title": 0.6931471805599453,
-                          "value": 1
-                      },
-                      {
-                          "name": "as-nc707",
-                          "used": 0.26071314689062053,
-                          "type": "engine",
-                          "title": 0.6931471805599453,
-                          "value": 1
-                      },
-                      {
-                          "name": "as-st583",
-                          "used": 0.28551444968445694,
-                          "type": "engine",
-                          "title": 0.6931471805599453,
-                          "value": 1
-                      },
-                      {
-                          "name": "as-oh182",
-                          "used": 0.2833952673333333,
-                          "type": "engine",
-                          "title": 0.6931471805599453,
-                          "value": 1
-                      }
-                  ],
-                  "name": "ip-172-31-9-175",
-                  "used": 30,
-                  "type": "engine",
-                  "title": 4.174387269895637,
-                  "value": 64
-              }
-          ],
-          "name": "dockerCloud",
-          "used": 30,
-          "type": "cloud",
-          "title": 2.1972245773362196,
-          "value": 8
-      }
-  ],
-  "cpuTotal": 8,
-  "name": "All the clouds",
-  "vmTotal": 0
+    "cpuUsedTotal": 0,
+    "memUsedTotal": 0,
+    "memTotal": 64426,
+    "cnTotal": 0,
+    "diskTotal": 0,
+    "psTotal": 1,
+    "used": 0,
+    "diskUsedTotal": 0,
+    "total": 0,
+    "children": [
+        {
+            "children": [
+                {
+                    "children": [
+                        {
+                            "name": "as-lb260",
+                            "used": 0,
+                            "type": "CONTAINER",
+                            "title": 0.6931471805599453,
+                            "value": 1
+                        },
+                        {
+                            "name": "as-se253",
+                            "used": 0,
+                            "type": "CONTAINER",
+                            "title": 0.6931471805599453,
+                            "value": 1
+                        },
+                        {
+                            "name": "as-rl178",
+                            "used": 0,
+                            "type": "CONTAINER",
+                            "title": 0.6931471805599453,
+                            "value": 1
+                        },
+                        {
+                            "name": "as-lo217",
+                            "used": 0,
+                            "type": "CONTAINER",
+                            "title": 0.6931471805599453,
+                            "value": 1
+                        },
+                        {
+                            "name": "as-sr655",
+                            "used": 0,
+                            "type": "CONTAINER",
+                            "title": 0.6931471805599453,
+                            "value": 1
+                        },
+                        {
+                            "name": "as-sr007",
+                            "used": 0,
+                            "type": "CONTAINER",
+                            "title": 0.6931471805599453,
+                            "value": 1
+                        },
+                        {
+                            "name": "as-ab189",
+                            "used": 0,
+                            "type": "CONTAINER",
+                            "title": 0.6931471805599453,
+                            "value": 1
+                        },
+                        {
+                            "name": "as-tt087",
+                            "used": 0,
+                            "type": "CONTAINER",
+                            "title": 0.6931471805599453,
+                            "value": 1
+                        },
+                        {
+                            "name": "as-ah352",
+                            "used": 0,
+                            "type": "CONTAINER",
+                            "title": 0.6931471805599453,
+                            "value": 1
+                        },
+                        {
+                            "name": "as-ne183",
+                            "used": 0,
+                            "type": "CONTAINER",
+                            "title": 0.6931471805599453,
+                            "value": 1
+                        },
+                        {
+                            "name": "as-em137",
+                            "used": 0,
+                            "type": "CONTAINER",
+                            "title": 0.6931471805599453,
+                            "value": 1
+                        },
+                        {
+                            "name": "as-ha761",
+                            "used": 0,
+                            "type": "CONTAINER",
+                            "title": 0.6931471805599453,
+                            "value": 1
+                        },
+                        {
+                            "name": "as-no075",
+                            "used": 0,
+                            "type": "CONTAINER",
+                            "title": 0.6931471805599453,
+                            "value": 1
+                        },
+                        {
+                            "name": "as-at693",
+                            "used": 0,
+                            "type": "CONTAINER",
+                            "title": 0.6931471805599453,
+                            "value": 1
+                        },
+                        {
+                            "name": "as-hp668",
+                            "used": 0,
+                            "type": "CONTAINER",
+                            "title": 0.6931471805599453,
+                            "value": 1
+                        },
+                        {
+                            "name": "as-eq746",
+                            "used": 0,
+                            "type": "CONTAINER",
+                            "title": 0.6931471805599453,
+                            "value": 1
+                        },
+                        {
+                            "name": "as-vi615",
+                            "used": 0,
+                            "type": "CONTAINER",
+                            "title": 0.6931471805599453,
+                            "value": 1
+                        },
+                        {
+                            "name": "as-oi743",
+                            "used": 0,
+                            "type": "CONTAINER",
+                            "title": 0.6931471805599453,
+                            "value": 1
+                        },
+                        {
+                            "name": "as-oc375",
+                            "used": 0,
+                            "type": "CONTAINER",
+                            "title": 0.6931471805599453,
+                            "value": 1
+                        },
+                        {
+                            "name": "as-le826",
+                            "used": 0,
+                            "type": "CONTAINER",
+                            "title": 0.6931471805599453,
+                            "value": 1
+                        },
+                        {
+                            "name": "as-ci653",
+                            "used": 0,
+                            "type": "CONTAINER",
+                            "title": 0.6931471805599453,
+                            "value": 1
+                        },
+                        {
+                            "name": "as-tu997",
+                            "used": 0,
+                            "type": "CONTAINER",
+                            "title": 0.6931471805599453,
+                            "value": 1
+                        },
+                        {
+                            "name": "as-nt132",
+                            "used": 0,
+                            "type": "CONTAINER",
+                            "title": 0.6931471805599453,
+                            "value": 1
+                        },
+                        {
+                            "name": "as-oo291",
+                            "used": 0,
+                            "type": "CONTAINER",
+                            "title": 0.6931471805599453,
+                            "value": 1
+                        },
+                        {
+                            "name": "as-tt475",
+                            "used": 0,
+                            "type": "CONTAINER",
+                            "title": 0.6931471805599453,
+                            "value": 1
+                        },
+                        {
+                            "name": "as-ss102",
+                            "used": 0,
+                            "type": "CONTAINER",
+                            "title": 0.6931471805599453,
+                            "value": 1
+                        },
+                        {
+                            "name": "as-at955",
+                            "used": 0,
+                            "type": "CONTAINER",
+                            "title": 0.6931471805599453,
+                            "value": 1
+                        },
+                        {
+                            "name": "as-nc707",
+                            "used": 0,
+                            "type": "CONTAINER",
+                            "title": 0.6931471805599453,
+                            "value": 1
+                        },
+                        {
+                            "name": "as-st583",
+                            "used": 0,
+                            "type": "CONTAINER",
+                            "title": 0.6931471805599453,
+                            "value": 1
+                        },
+                        {
+                            "name": "as-oh182",
+                            "used": 0,
+                            "type": "CONTAINER",
+                            "title": 0.6931471805599453,
+                            "value": 1
+                        }
+                    ],
+                    "name": "ip-172-31-9-175",
+                    "used": 0,
+                    "type": "engine",
+                    "title": 4.174387269895637,
+                    "value": 64
+                }
+            ],
+            "name": "dockerCloud",
+            "used": 0,
+            "type": "cloud",
+            "title": 2.1972245773362196,
+            "value": 8
+        },
+        {
+            "children": [
+                {
+                    "children": [
+                        {
+                            "name": "as-lb260",
+                            "used": 0,
+                            "type": "CONTAINER",
+                            "title": 0.6931471805599453,
+                            "value": 1
+                        },
+                        {
+                            "name": "as-se253",
+                            "used": 0,
+                            "type": "CONTAINER",
+                            "title": 0.6931471805599453,
+                            "value": 1
+                        },
+                        {
+                            "name": "as-rl178",
+                            "used": 0,
+                            "type": "CONTAINER",
+                            "title": 0.6931471805599453,
+                            "value": 1
+                        },
+                        {
+                            "name": "as-lo217",
+                            "used": 0,
+                            "type": "CONTAINER",
+                            "title": 0.6931471805599453,
+                            "value": 1
+                        },
+                        {
+                            "name": "as-sr655",
+                            "used": 0,
+                            "type": "CONTAINER",
+                            "title": 0.6931471805599453,
+                            "value": 1
+                        },
+                        {
+                            "name": "as-sr007",
+                            "used": 0,
+                            "type": "CONTAINER",
+                            "title": 0.6931471805599453,
+                            "value": 1
+                        },
+                        {
+                            "name": "as-ab189",
+                            "used": 0,
+                            "type": "CONTAINER",
+                            "title": 0.6931471805599453,
+                            "value": 1
+                        },
+                        {
+                            "name": "as-tt087",
+                            "used": 0,
+                            "type": "CONTAINER",
+                            "title": 0.6931471805599453,
+                            "value": 1
+                        },
+                        {
+                            "name": "as-ah352",
+                            "used": 0,
+                            "type": "CONTAINER",
+                            "title": 0.6931471805599453,
+                            "value": 1
+                        },
+                        {
+                            "name": "as-ne183",
+                            "used": 0,
+                            "type": "CONTAINER",
+                            "title": 0.6931471805599453,
+                            "value": 1
+                        },
+                        {
+                            "name": "as-em137",
+                            "used": 0,
+                            "type": "CONTAINER",
+                            "title": 0.6931471805599453,
+                            "value": 1
+                        },
+                        {
+                            "name": "as-ha761",
+                            "used": 0,
+                            "type": "CONTAINER",
+                            "title": 0.6931471805599453,
+                            "value": 1
+                        },
+                        {
+                            "name": "as-no075",
+                            "used": 0,
+                            "type": "CONTAINER",
+                            "title": 0.6931471805599453,
+                            "value": 1
+                        },
+                        {
+                            "name": "as-at693",
+                            "used": 0,
+                            "type": "CONTAINER",
+                            "title": 0.6931471805599453,
+                            "value": 1
+                        },
+                        {
+                            "name": "as-hp668",
+                            "used": 0,
+                            "type": "CONTAINER",
+                            "title": 0.6931471805599453,
+                            "value": 1
+                        },
+                        {
+                            "name": "as-eq746",
+                            "used": 0,
+                            "type": "CONTAINER",
+                            "title": 0.6931471805599453,
+                            "value": 1
+                        },
+                        {
+                            "name": "as-vi615",
+                            "used": 0,
+                            "type": "CONTAINER",
+                            "title": 0.6931471805599453,
+                            "value": 1
+                        },
+                        {
+                            "name": "as-oi743",
+                            "used": 0,
+                            "type": "CONTAINER",
+                            "title": 0.6931471805599453,
+                            "value": 1
+                        },
+                        {
+                            "name": "as-oc375",
+                            "used": 0,
+                            "type": "CONTAINER",
+                            "title": 0.6931471805599453,
+                            "value": 1
+                        },
+                        {
+                            "name": "as-le826",
+                            "used": 0,
+                            "type": "CONTAINER",
+                            "title": 0.6931471805599453,
+                            "value": 1
+                        },
+                        {
+                            "name": "as-ci653",
+                            "used": 0,
+                            "type": "CONTAINER",
+                            "title": 0.6931471805599453,
+                            "value": 1
+                        },
+                        {
+                            "name": "as-tu997",
+                            "used": 0,
+                            "type": "CONTAINER",
+                            "title": 0.6931471805599453,
+                            "value": 1
+                        },
+                        {
+                            "name": "as-nt132",
+                            "used": 0,
+                            "type": "CONTAINER",
+                            "title": 0.6931471805599453,
+                            "value": 1
+                        },
+                        {
+                            "name": "as-oo291",
+                            "used": 0,
+                            "type": "CONTAINER",
+                            "title": 0.6931471805599453,
+                            "value": 1
+                        },
+                        {
+                            "name": "as-tt475",
+                            "used": 0,
+                            "type": "CONTAINER",
+                            "title": 0.6931471805599453,
+                            "value": 1
+                        },
+                        {
+                            "name": "as-ss102",
+                            "used": 0,
+                            "type": "CONTAINER",
+                            "title": 0.6931471805599453,
+                            "value": 1
+                        },
+                        {
+                            "name": "as-at955",
+                            "used": 0,
+                            "type": "CONTAINER",
+                            "title": 0.6931471805599453,
+                            "value": 1
+                        },
+                        {
+                            "name": "as-nc707",
+                            "used": 0,
+                            "type": "CONTAINER",
+                            "title": 0.6931471805599453,
+                            "value": 1
+                        },
+                        {
+                            "name": "as-st583",
+                            "used": 0,
+                            "type": "CONTAINER",
+                            "title": 0.6931471805599453,
+                            "value": 1
+                        },
+                        {
+                            "name": "as-oh182",
+                            "used": 0,
+                            "type": "CONTAINER",
+                            "title": 0.6931471805599453,
+                            "value": 1
+                        }
+                    ],
+                    "name": "ip-172-31-9-175",
+                    "used": 0,
+                    "type": "engine",
+                    "title": 4.174387269895637,
+                    "value": 64
+                }
+            ],
+            "name": "TestCloud",
+            "used": 0,
+            "type": "cloud",
+            "title": 2.1972245773362196,
+            "value": 8
+        }
+    ],
+    "cpuTotal": 8,
+    "name": "All the clouds",
+    "vmTotal": 0
 }

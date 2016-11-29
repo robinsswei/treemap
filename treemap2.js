@@ -1,6 +1,12 @@
 /*global $*/
 $(function(){
 
+  // 1. load header.html
+  $("#header").load("../../header.html",function(){
+    document.getElementById("brand").innerHTML="Heatmap";
+    document.getElementById("userinput").value="";
+  });
+
   var counter = 0;
   window.uniqueId = function(){
       return 'id-' + counter++
@@ -13,7 +19,8 @@ $(function(){
       showDisk = false,
       showMem = false
 
-  var cpuData = {},
+  var cpu = {},
+      cpuData = {},
       diskData = {},
       memData = {},
       allcpu = {},
@@ -21,13 +28,51 @@ $(function(){
       allmem = {}
 
   var fetchCpuData = function(){
-    // return $.getJSON("../api/heatmap/cpu").then(function(data){
-    return d3.json("data/cpu.json", function(error, data){
-        window.data = data
-        cpuData = parseData(data)
+    // return d3.json("../api/heatmap/cpu", function(error, data){
+    return d3.json("../api/heatmap/cpu", function(error, data){
+        cpu = data
+
+        var temp = {}
+        temp = JSON.parse(JSON.stringify(cpu))
+
+        var stack = []
+        stack.push(temp)
+
+        var colorRange = [0.1, 1.0]
+
+        while(stack.length>0){
+          var child = stack.pop()
+          var total = 0
+          if(child.children !== undefined){
+            for(var i=0; i<child.children.length; i++){
+              total += child.children[i].title
+            }
+            child.totalTitle = total
+
+            for(var i=0; i<child.children.length; i++){
+              var grandChild = child.children[i]
+              grandChild.rate = grandChild.title / total
+
+              if(grandChild.value === 0){
+                grandChild.colorRate = colorRange[0]
+              }else{
+                colorRate = grandChild.used/grandChild.value
+                if(colorRate>colorRange[1]) colorRate = colorRange[1]
+                if(colorRate<colorRange[0]) colorRate = colorRange[0]
+                grandChild.colorRate = colorRate
+              }
+
+              if(grandChild.children !== undefined) stack.push(grandChild)
+
+            }
+          }
+        }
+
+        cpuData = temp
 
         if(data["cpuTotal"] > 0) showCpu = true
-        // allcpu = getVMContainers(data, "allcpu")
+
+        if(showCpu) createTreemap("cpu", cpuData)
     })
   }
 
@@ -49,16 +94,18 @@ $(function(){
 
   var fetchAllData = function() {
       return fetchCpuData()
-              .then(fetchDiskData)
-              .then(fetchMemData)
+              // .then(fetchDiskData)
+              // .then(fetchMemData)
   }
 
-
-  $.when(fetchCpuData())
-  // $.when(fetchAllData())
+  $.when(fetchAllData())
    .then(function(){
       console.log("cpu")
+      console.log(cpu)
+
+      console.log("cpuData")
       console.log(cpuData)
+
       // console.log("allcpu")
       // console.log(allcpu)
       createResponsibleLegend('legend')
@@ -426,94 +473,53 @@ $(function(){
     return (colorDomain[colorDomain.length - 1] - colorDomain[0])/4*d + colorDomain[0];
   }
 
-  function parseData(json){
-    var temp = {}
-    // shallow copy of the json
-    _.extend(temp, json) 
+  // function parseData(json){
+  //   var temp = {}
+  //   // shallow copy of the json object
+  //   _.extend(temp, json) 
 
-    function genRate(obj){
-      var children = obj.children
+  //   function genRate(obj){
+  //     var d = $.Deferred();
+  //     var children = obj.children
 
-      if( children === undefined || !Array.isArray(children) ) return
+  //     if( children === undefined || !Array.isArray(children) ) return
 
-      var colorRange = [0.1, 1.0],
-          len = children.length,
-          total = 0
+  //     var colorRange = [0.1, 1.0],
+  //         len = children.length,
+  //         total = 0
 
-      for(var i=0; i<len; i++){
-        total += children[i].title
-      }
+  //     for(var i=0; i<len; i++){
+  //       total += children[i].title
+  //     }
 
-      obj.totalTitle = total
+  //     obj.totalTitle = total
 
-      if(total !== 0){
-        for(var i=0; i<len; i++){
-          var child = children[i]
-          child.rate = child.title / total
+  //     if(total !== 0){
+  //       for(var i=0; i<len; i++){
+  //         var child = children[i]
+  //         child.rate = child.title / total
 
-          if(child.value === 0){
-            child.colorRate = colorRange[0]
-          }else{
-            colorRate = child.used/child.value
-            if(colorRate>colorRange[1]) colorRate = colorRange[1]
-            if(colorRate<colorRange[0]) colorRate = colorRange[0]
-            child.colorRate = colorRate
-          }
+  //         if(child.value === 0){
+  //           child.colorRate = colorRange[0]
+  //         }else{
+  //           colorRate = child.used/child.value
+  //           if(colorRate>colorRange[1]) colorRate = colorRange[1]
+  //           if(colorRate<colorRange[0]) colorRate = colorRange[0]
+  //           child.colorRate = colorRate
+  //         }
 
-          genRate(child)
-        }
-      }
+  //         genRate(child)
+  //       }
+  //     }
 
-    }
+  //     return d
 
-    genRate(temp)
+  //   }
 
-    return temp
-  }
+  //   genRate(temp)
 
-  /**
-   * [genChildrenRate description]
-   * @param  {[type]} children [description]
-   * @return {[type]}          [description]
-   */
-  function genChildrenRate(children){
-    var array = []
-
-    if(Array.isArray(children)){
- 
-
-      function genRate(array){
-        if( !Array.isArray(array) ) return
-
-        var colorRange = [0.1, 1.0],
-          children = array.slice(0),
-          len = children.length
-
-        for(var i=0; i<len; i++){
-          total += children[i].title
-        }
-
-        for(var i=0; i<len; i++){
-          var child = children[i]
-          child.rate = child.title / total
-
-          if(child.value === 0){
-            child.colorRate = colorRange[0]
-          }else{
-            colorRate = child.used/child.value
-            if(colorRate>colorRange[1]) colorRate = colorRange[1]
-            if(colorRate<colorRange[0]) colorRate = colorRange[0]
-            child.colorRate = colorRate
-          }
-        }
-
-        return children
-      }
-    }
-
-    return 
-  }
-
+  //   return temp
+  // }
 
 
   function getVMContainers(json, type){
