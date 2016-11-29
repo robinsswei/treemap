@@ -231,7 +231,7 @@
                     "value": 64
                 }
             ],
-            "name": "dockerCloud",
+            "name": "dockerCloud dockerCloud dockerCloud",
             "used": 0,
             "type": "cloud",
             "title": 2.1972245773362196,
@@ -242,7 +242,7 @@
                 {
                     "children": [
                         {
-                            "name": "as-lb260",
+                            "name": "as-lb260 as-lb260 as-lb260 as-lb260 as-lb260",
                             "used": 0,
                             "type": "CONTAINER",
                             "title": 0.6931471805599453,
